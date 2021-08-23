@@ -41,6 +41,15 @@ config REMOTEPROC_STM32_COPRO
 	  Say 'y' here to add support for STM32 Cortex-M4 coprocessors via the
 	  remoteproc framework.
 
+config REMOTEPROC_RCAR_COPRO
+	bool "Support for Renesas R-Car coprocessor"
+	select REMOTEPROC
+	depends on ARCH_RMOBILE
+	depends on OF_CONTROL
+	help
+	  Say 'y' here to add support for Renesas R-Car Cortex-R7 coprocessors via the
+	  remoteproc framework.
+
 config REMOTEPROC_TI_K3_ARM64
 	bool "Support for TI's K3 based ARM64 remoteproc driver"
 	select REMOTEPROC
